@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nave.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7abf730381.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        .header2{
+            height: 10vh;
+            background-color: hsla(180, 100%, 50%, 0.655);
+            color: #fff;
+            place-items: center;
+            position: fixed;
+            z-index: 10;
+            width: 100%;
+        }
+        .container{
+            height: 10vh;
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .container .f1{
+            display: flex;
+            gap: 30px;
+            height: 10vh;
+        }
+        .container ul li{
+            height: 10vh;
+            line-height: 10vh;
+            font-size: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .signup .login li a{
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        .fa-trash{
+            color: red;
+        }
+
+       .space{
+            width: 100%;
+            height: 5vh;
+       }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header2">
+        <div class="container">
+
+
+<div class="signup">
+    <ul class="login">
+        <li><a href="/croud">New Add Employee</a></li>
+    </ul>
+</div>
+
+<!--------------------------------------open button-------------------------------->  
+    
+<!--------------------------------------open button--------------------------------> 
+        
+    </div>
+    </div>
+
+
+    <!--------------------------------------space--------------------------------> 
+
+<div class="space">
+    <div class="space1"></div>
+  </div>
+<!--------------------------------------space--------------------------------> 
+
+
+<div class="w3-container">
+    <div class="space">
+  <h2></h2>
+  <p></p>
+</div>
+  <table class="w3-table">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>email</th>
+      <th>phone</th>
+      <th>salary</th>
+      <th>Delet</th>
+      <th>Edit</th>
+    </tr>
+</thead>
+    <thead>
+    {% for i in key %}
+    <tr>
+      <th>{{i.id}}</th>
+      <td>{{i.name}}</td>
+      <td>{{i.email}}</td>
+      <td>{{i.phone}}</td>
+      <td>{{i.sal}}</td>
+      <td><a href="/delete?eid={{i.id}}"><i class="fa-solid fa-trash"></i></a></td>
+      <td><a href="/updateEmployee?eid={{i.id}}"><i class="fa-solid fa-pen-to-square"></i></a></td>
+    </tr>
+    {% endfor %}
+</thead>
+  </table>
+</div>
+
+
+<!--------------------------------------slider--------------------------------> 
+
+    
+
+
+    <script>
+
+        function openm(){
+            var x=document.getElementById('element1');
+            x.style.top='0%';
+        }
+        function closem(){
+            var y=document.getElementById('element1');
+            y.style.top='-100%';
+
+
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+   
+    
+</body>
+</html>
+
+
